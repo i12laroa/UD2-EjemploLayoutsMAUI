@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EjemploLayoutsMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+
+            <!-- Ejemplo de FlexLayout -->
+            <Label Text="FlexLayout" FontSize="Large" FontAttributes="Bold"/>
+            <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="SpaceAround">
+                <BoxView Color="LightBlue" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGreen" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightCoral" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGoldenrodYellow" WidthRequest="100" HeightRequest="100" />
+            </FlexLayout>
+
+            <!-- Ejemplo de VerticalStackLayout -->
+            <Label Text="VerticalStackLayout" FontSize="Large" FontAttributes="Bold"/>
+            <VerticalStackLayout Spacing="10">
+                <BoxView Color="LightBlue" HeightRequest="50" />
+                <BoxView Color="LightGreen" HeightRequest="50" />
+                <BoxView Color="LightCoral" HeightRequest="50" />
+                <BoxView Color="LightGoldenrodYellow" HeightRequest="50" />
+            </VerticalStackLayout>
+
+            <!-- Ejemplo de AbsoluteLayout -->
+            <Label Text="AbsoluteLayout" FontSize="Large" FontAttributes="Bold"/>
+            <AbsoluteLayout HeightRequest="200">
+                <BoxView Color="LightBlue" WidthRequest="50" HeightRequest="50"
+                         AbsoluteLayout.LayoutBounds="0, 0, 50, 50"
+                         AbsoluteLayout.LayoutFlags="None"/>
+                <BoxView Color="LightGreen" WidthRequest="50" HeightRequest="50"
+                         AbsoluteLayout.LayoutBounds="1, 0, 50, 50"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <BoxView Color="LightCoral" WidthRequest="50" HeightRequest="50"
+                         AbsoluteLayout.LayoutBounds="0, 1, 50, 50"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                <BoxView Color="LightGoldenrodYellow" WidthRequest="100" HeightRequest="50"
+                         AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 50"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            </AbsoluteLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
