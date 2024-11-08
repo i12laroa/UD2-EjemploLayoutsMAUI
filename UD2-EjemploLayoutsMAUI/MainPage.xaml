@@ -4,25 +4,63 @@
              x:Class="UD2_EjemploLayoutsMAUI.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="20" Padding="20">
+        <VerticalStackLayout Spacing="20" Padding="10">
 
-            <!-- Ejemplo de FlexLayout -->
-            <Label Text="FlexLayout" FontSize="Large" FontAttributes="Bold"/>
-            <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="SpaceAround">
-                <BoxView Color="LightBlue" WidthRequest="100" HeightRequest="100" />
-                <BoxView Color="LightGreen" WidthRequest="100" HeightRequest="100" />
-                <BoxView Color="LightCoral" WidthRequest="100" HeightRequest="100" />
-                <BoxView Color="LightGoldenrodYellow" WidthRequest="100" HeightRequest="100" />
-            </FlexLayout>
+            <!-- Ejemplo de GridLayout -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Column 0, Row 0"
+                     WidthRequest="200" />
+                
+                <Label Grid.Column="1"
+                     Text="Column 1, Row 0" />
+                
+                <Label Grid.Row="1"
+                     Text="Column 0, Row 1" />
+                
+                <Label Grid.Column="1"
+                      Grid.Row="1"
+                         Text="Column 1, Row 1" />
+                </Grid>
+
+            <!-- Ejemplo de HorizontalStacklayout -->
+            <HorizontalStackLayout Background="AliceBlue">
+                <Rectangle Fill="Red"
+                 HeightRequest="30"
+                WidthRequest="30" />
+                <Label Text="Red"
+                 FontSize="18" />
+                <Button Text="Enviar"/>
+            </HorizontalStackLayout>
+
 
             <!-- Ejemplo de VerticalStackLayout -->
             <Label Text="VerticalStackLayout" FontSize="Large" FontAttributes="Bold"/>
-            <VerticalStackLayout Spacing="10">
+            <VerticalStackLayout Spacing="10" Background="Aquamarine" >
                 <BoxView Color="LightBlue" HeightRequest="50" />
                 <BoxView Color="LightGreen" HeightRequest="50" />
                 <BoxView Color="LightCoral" HeightRequest="50" />
                 <BoxView Color="LightGoldenrodYellow" HeightRequest="50" />
             </VerticalStackLayout>
+
+
+            <!-- Ejemplo de FlexLayout -->
+            <Label Text="FlexLayout" FontSize="Large" FontAttributes="Bold"/>
+            <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="End">
+                <BoxView Color="LightBlue" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGreen" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightCoral" WidthRequest="100" HeightRequest="100" />
+                <BoxView Color="LightGoldenrodYellow" WidthRequest="100" HeightRequest="100" />
+
+            </FlexLayout>
 
             <!-- Ejemplo de AbsoluteLayout -->
             <Label Text="AbsoluteLayout" FontSize="Large" FontAttributes="Bold"/>
@@ -31,15 +69,16 @@
                          AbsoluteLayout.LayoutBounds="0, 0, 50, 50"
                          AbsoluteLayout.LayoutFlags="None"/>
                 <BoxView Color="LightGreen" WidthRequest="50" HeightRequest="50"
-                         AbsoluteLayout.LayoutBounds="1, 0, 50, 50"
-                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                         AbsoluteLayout.LayoutBounds="150, 0, 50, 50"
+                         AbsoluteLayout.LayoutFlags="None"/>
                 <BoxView Color="LightCoral" WidthRequest="50" HeightRequest="50"
-                         AbsoluteLayout.LayoutBounds="0, 1, 50, 50"
-                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
-                <BoxView Color="LightGoldenrodYellow" WidthRequest="100" HeightRequest="50"
-                         AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 50"
-                         AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                         AbsoluteLayout.LayoutBounds="0, 150, 50, 50"
+                         AbsoluteLayout.LayoutFlags="None"/>
+                <BoxView Color="LightGoldenrodYellow" WidthRequest="50" HeightRequest="50"
+                         AbsoluteLayout.LayoutBounds="100, 100, 50, 50"
+                         AbsoluteLayout.LayoutFlags="None"/>
             </AbsoluteLayout>
+        
 
         </VerticalStackLayout>
     </ScrollView>
